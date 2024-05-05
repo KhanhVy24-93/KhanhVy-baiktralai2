@@ -1,0 +1,92 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100vh;
+    background: gainsboro;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    width: auto;
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+}
+/* CSS cho ảnh */
+img {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+    transition: 0.256s;
+  }
+  
+  /* CSS cho khung ảnh */
+  .image {
+    width: 20%;
+    height: 200px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 20px 0;
+    
+  }
+  
+  /* Hiệu ứng hover cho ảnh */
+  .image:hover img {
+    transform: scale(1.2);
+  }
+  
+  /* CSS cho thư viện ảnh */
+  .gallery {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 51, 255, 0.338);
+    display: flex;
+    align-items: center;
+    color: antiquewhite;
+    opacity: 1;
+    pointer-events: none;
+    transform: scale(0.6, 0.8); /* thu nhỏ thư viện ảnh khi chưa kích hoạt */
+    transition: 0.5s;
+  }
+  
+  /* CSS cho nút đóng thư viện ảnh */
+  .close {
+    position: fixed;
+    top: 250px;
+    right: 25px;
+    font-size: 35px;
+  }
+  .control{
+    font-size: 35px;
+    color: rgb(15, 2, 88);
+    position: absolute;
+  }
+  .control.prev{
+    left: 15px;
+
+  }
+  .control.right{
+    right: 15px;
+  }
+  .gallery_inner{
+    width: 70%;
+    height: 70%;
+    margin: 0 auto;
+  }
+  .show{
+    opacity: 0;
+    pointer-events: auto;
+    transform: scale(0.8);
+  }
